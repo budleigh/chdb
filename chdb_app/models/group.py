@@ -33,6 +33,10 @@ class Alliance(Group):
     pass
 
 
+class Army(Group):
+    pass
+
+
 class GroupHierarchyPosition(models.Model):
     group = models.ForeignKey('Group', related_name='hierarchy_positions', on_delete=models.CASCADE)
     ordinal = models.PositiveIntegerField(null=True, blank=True)
