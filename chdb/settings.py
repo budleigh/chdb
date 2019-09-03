@@ -86,13 +86,13 @@ DATABASES = {
         'NAME': 'chdb',
         'USER': 'yoozer',
         'PASSWORD': 'Generalkdrama1{}',
-        'HOST': '',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
 
 # overwrite for prod/stage
-if os.environ.get('DATABASE_URL'):
+if os.environ.get('DATABASE_URL', None):
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
