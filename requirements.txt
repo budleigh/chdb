@@ -1,0 +1,8 @@
+astropy==3.2.1
+Django==2.2.4
+django-polymorphic==2.1.2
+gunicorn==19.9.0
+numpy==1.17.1
+psycopg2==2.8.3
+pytz==2019.2
+sqlparse==0.3.0
