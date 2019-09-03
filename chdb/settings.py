@@ -80,16 +80,7 @@ WSGI_APPLICATION = 'chdb.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'chdb',
-        'USER': 'yoozer',
-        'PASSWORD': 'Generalkdrama1{}',
-        'HOST': '',
-        'PORT': '',
-    }
-}
+DATABASES = {}
 
 # overwrite for prod/stage
 if os.environ.get('DATABASE_URL', None):
