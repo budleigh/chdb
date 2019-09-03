@@ -82,13 +82,18 @@ WSGI_APPLICATION = 'chdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'chdb.db',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'chdb',
+        'USER': 'yoozer',
+        'PASSWORD': 'Generalkdrama1{}',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
-if os.environ.get('ENV', 'DEV') != 'DEV':
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# overwrite for prod/stage
+if os.environ.get('DATABASE_URL'):
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=False)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
