@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'chdb',
         'USER': 'yoozer',
         'PASSWORD': 'Generalkdrama1{}',
-        'HOST': 'localhost',
+        'HOST': '',
         'PORT': '',
     }
 }
